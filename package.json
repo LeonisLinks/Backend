@@ -1,0 +1,32 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "A very very simple backend for Leonis",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js --dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeonisLinks/Backend.git"
+  },
+  "keywords": [
+    "leonis",
+    "backend",
+    "discord",
+    "bot",
+    "profile"
+  ],
+  "author": "Leonis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LeonisLinks/Backend/issues"
+  },
+  "homepage": "https://github.com/LeonisLinks/Backend#readme",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.26.1"
+  }
+}
