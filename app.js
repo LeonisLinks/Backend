@@ -33,6 +33,10 @@ fastify.get("/discord", async (req, res) => {
 	res.send({ username, avatar, status });
 })
 
+fastify.get("/", (req, res) => {
+	res.send({ message: "Hello, I'm a API for Leonis :)", leonis: true });
+})
+
 fastify.listen({ port: process.env.PORT || 3000, host: "0.0.0.0" }, (err, address) => {
 	if (err) throw err
 	console.log(`Server listening on ${address}`);
