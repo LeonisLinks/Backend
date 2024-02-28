@@ -1,11 +1,14 @@
 const fastify = require('fastify')({
 	logger: process.argv[2] === '--dev'
 })
-require('dotenv').config();
+const cors = require('@fastify/cors');
+fastify.register(cors, {
+	origin: "*"
+});
 
+require('dotenv').config();
 const Discord = require("discord.js");
 const client = new Discord.Client({ partials: Object.values(Object.fromEntries(new Map(Object.entries(Discord.Partials).filter((e) => Number.isInteger(e[1]))))),  intents: Object.values(Object.fromEntries(new Map(Object.entries(Discord.GatewayIntentBits).filter((e) => Number.isInteger(e[1]))))) });
-
 
 fastify.get("/discord", async (req, res) => {
 	let id = req.query.i;
